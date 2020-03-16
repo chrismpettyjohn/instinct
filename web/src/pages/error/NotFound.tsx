@@ -1,18 +1,19 @@
+import './ErrorPage.scss';
 import React from 'react';
-import { Card, Container, Column, set404, UserLayout } from 'components';
+import { set404 } from 'components';
 
 set404(<NotFound />);
 
 export function NotFound() {
   return (
-    <UserLayout>
-      <Container>
-        <Column side="left">
-          <Card header="Page Not Found">
-            <img style={{ float: 'right' }} src="/img/error.gif" />
-          </Card>
-        </Column>
-      </Container>
-    </UserLayout>
+    <div className="flex-center position-ref full-height">
+      <div className="code">
+        404
+      </div>
+
+      <div className="message" style={{ padding: 10 }}>
+        Not Found
+      </div>
+    </div>
   );
 }
