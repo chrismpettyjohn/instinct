@@ -53,13 +53,6 @@ ALTER TABLE users MODIFY mail VARCHAR(500);
 SET FOREIGN_KEY_CHECKS = 1;
 
 -- ----------------------------
--- Permission updates for Instinct to work
--- ----------------------------
-INSERT INTO `permissions` VALUES (null, 'website_show_staff', 'Users with this permission will be shown on the staff page');
-INSERT INTO `permissions` VALUES (null, 'website_show_government', 'Users with this permission will be shown on the government page');
-INSERT INTO `permissions` VALUES (null, 'website_show_admin_panel', 'Users with this permission can access the admin panel');
-
--- ----------------------------
 -- Business rank updates for Instinct to work
 -- ----------------------------
 ALTER TABLE groups_rank
