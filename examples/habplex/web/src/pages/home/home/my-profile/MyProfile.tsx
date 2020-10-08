@@ -1,5 +1,5 @@
 import './MyProfile.scss';
-import { Link } from 'react-router-dom';
+import { Link } from 'wouter';
 import React, { useContext } from 'react';
 import { Avatar, sessionContext} from 'instinct-frontend';
 
