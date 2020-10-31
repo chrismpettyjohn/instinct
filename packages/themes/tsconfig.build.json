@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.build.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "noEmit": false
+  },
+  "references": [
+    {
+      "path": "../interface/tsconfig.build.json"
+    },
+    {
+      "path": "../interface-rp/tsconfig.build.json"
+    },
+    {
+      "path": "../frontend/tsconfig.build.json"
+    }
+  ],
+  "include": [
+    "src/**/*"
+  ]
+}
