@@ -4,15 +4,16 @@ import json from '@rollup/plugin-json';
 import image from '@rollup/plugin-image';
 import frontendPackage from './package.json';
 import commonJS from '@rollup/plugin-commonjs';
+import typescript from '@rollup/plugin-typescript';
 import resolveDependencies from '@rollup/plugin-node-resolve';
 import blockPeerDependencies from 'rollup-plugin-peer-deps-external';
 
 export default {
   preserveModules: false,
-  input: "./build/index.js",
+  input: "./src/index.ts",
   output: [
     {
-      file: './dist/index.js',
+      dir: './dist',
       format: "cjs",
       sourcemap: false,
     },
@@ -42,6 +43,12 @@ export default {
 
     // Bundle image files
     image(),
+
+   // Typescript compilation
+   typescript({
+     rootDir: './src',
+     tsconfig: './tsconfig.build.json',
+   }),
 
     // Bundle into CommonJS format
     commonJS({
