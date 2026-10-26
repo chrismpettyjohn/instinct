@@ -1,16 +1,63 @@
-<center>
-<img src="https://i.imgur.com/F0MPSW2.png"/></center>
+<p align="center">
+  <img src="https://i.imgur.com/F0MPSW2.png" alt="Instinct Logo" />
+</p>
 
-<img src="https://i.imgur.com/hnXKQig.png" />
+## Developers
 
-## Screenshots
-https://imgur.com/a/0c5zTbi
+- **LeChris** ([chrismpettyjohn](https://github.com/chrismpettyjohn)) - Lead Developer & Creator
+- **Raizer** - Cosmic Theme
+- **necmi** - Ares Theme
+- **Sonay** - Flat Theme & Bobba Theme
+- **Cake** - Classic Theme
 
-## Discord
-Join our Discord here: https://discord.gg/ecweHJ3F9M
+## Local Use Instructions
 
-## Getting Started
-If you'd like to start using Instinct, you can follow the tutorial [here](https://instinct.dev)
+### Prerequisites
 
-## Educational Purposes
-Please note, that this project is to be used for educational purposes and is not available for commercial purposes nor resale.
+- [Node.js](https://nodejs.org/) (>= 16.0.0)
+- [Yarn](https://yarnpkg.com/)
+- MySQL Database (ArcturusMS compatible)
+
+### 1. Install Dependencies
+
+Install all project dependencies from the repository root:
+
+```bash
+yarn
+```
+
+### 2. Build Packages
+
+Build all Instinct packages:
+
+```bash
+yarn build
+```
+
+### 3. Environment Configuration
+
+1. **API**: Copy `demo/api/.env.example` to `demo/api/.env` and update your database credentials:
+   ```bash
+   cp demo/api/.env.example demo/api/.env
+   ```
+
+2. **Web**: Copy `demo/web/.env.example` to `demo/web/.env`:
+   ```bash
+   cp demo/web/.env.example demo/web/.env
+   ```
+
+### 4. Start the Application
+
+Start the API and Web demo applications in separate terminal windows:
+
+- **Start API**:
+  ```bash
+  cd demo/api
+  yarn start
+  ```
+
+- **Start Web**:
+  ```bash
+  cd demo/web
+  yarn start
+  ```
